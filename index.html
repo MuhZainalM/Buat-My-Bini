@@ -3,48 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untuk Kamu yang Spesial ❤️</title>
+    <title>Untuk Kamu, Semestaku ❤️</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Tombol Musik Latar (Opsional, klik untuk putar) -->
+    <button id="music-btn" class="music-toggle" title="Putar Musik">🎵 Putar Lagu</button>
+    <audio id="bg-music" loop>
+        <!-- Menggunakan musik instrumental piano romantis bebas hak cipta -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/02/07/audio_1822014c01.mp3?filename=romantic-piano-111457.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="container">
-        <!-- Layar Pembuka (Amplop) -->
+        <!-- Layar 1: Amplop Pembuka -->
         <div id="intro-screen" class="card active">
-            <div class="heart-icon">💌</div>
-            <h1>Ada pesan kecil buat kamu...</h1>
-            <p>Coba klik tombol di bawah ya.</p>
-            <button id="open-btn" class="btn-primary">Buka Pesan</button>
+            <div class="envelope-wrapper">
+                <div class="heart-beat">💖</div>
+            </div>
+            <h1 class="romantic-font">Hai, Sayang...</h1>
+            <p class="intro-text">Aku bikin sesuatu yang kecil khusus buat kamu. Pakai headset atau nyalain suaranya biar makin berasa ya.</p>
+            <button id="open-btn" class="btn-primary">Buka Suratnya 💌</button>
         </div>
 
-        <!-- Layar Utama (Isi Pesan) -->
+        <!-- Layar 2: Surat Cinta & Efek Ketik -->
         <div id="main-screen" class="card hidden">
-            <h2 class="title">Hai, Sayang ✨</h2>
-            <p class="subtitle">Cuma mau ngingetin satu hal penting hari ini:</p>
+            <h2 class="romantic-font title">Untuk Kamu yang Paling Berharga ✨</h2>
             
-            <div class="message-box">
-                <!-- GANTI PESAN DI BAWAH INI SESUAI KEINGINANMU -->
-                <p>
-                    Di antara banyaknya hal yang terjadi setiap hari, kamu selalu jadi bagian favoritku. 
-                    Terima kasih sudah hadir, jadi tempat pulang paling nyaman, dan bikin hari-hariku jauh lebih berarti.
-                </p>
-                <p class="highlight">
-                    Kamu itu spesial banget buat aku, lebih dari yang bisa aku jelasin lewat kata-kata. ❤️
-                </p>
+            <div class="letter-box">
+                <p id="typewriter-text"></p>
+                <span class="cursor">|</span>
             </div>
 
-            <!-- Alasan Kenapa Dia Spesial (Interaktif) -->
-            <div class="reason-section">
-                <p class="reason-label">Klik tombol ini kalau mau tahu alasan kenapa kamu spesial:</p>
-                <div id="reason-display" class="reason-box">Klik tombol di bawah! 👇</div>
-                <button id="reason-btn" class="btn-secondary">Lihat Alasan Lain</button>
+            <!-- Alasan Kenapa Dia Spesial -->
+            <div id="interactive-section" class="hidden-fade">
+                <div class="divider"><span>❦</span></div>
+                <p class="small-label">Setiap kali kamu ragu, ingat alasan-alasan ini:</p>
+                <div id="reason-display" class="reason-card">
+                    "Kamu adalah alasan kenapa hari-hariku selalu terasa cukup."
+                </div>
+                <button id="reason-btn" class="btn-secondary">Alasan Lainnya 💕</button>
+
+                <!-- Pertanyaan Penutup Lucu & Romantis -->
+                <div class="question-box">
+                    <p class="question-text">Jujur ya... kamu sayang sama aku nggak? 🥺</p>
+                    <div class="btn-group">
+                        <button id="yes-btn" class="btn-yes">Sayang Banget! ❤️</button>
+                        <button id="no-btn" class="btn-no">Nggak 😜</button>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Layar 3: Pesan Akhir Setelah Klik "Sayang Banget" -->
+        <div id="final-screen" class="card hidden">
+            <div class="heart-beat">🥰💞</div>
+            <h2 class="romantic-font title">Aku Juga Sayang Kamu!</h2>
+            <p class="final-message">
+                Terima kasih sudah milih aku, bertahan sama aku, dan selalu ada di sampingku. 
+                Jangan pernah ngerasa sendirian ya, karena di sini ada aku yang selalu bangga dan bersyukur punya kamu.
+            </p>
+            <p class="signature">Selamanya milikmu,<br><span>— Yang paling sayang kamu ❤️</span></p>
         </div>
     </div>
 
-    <!-- Container untuk animasi hati melayang -->
     <div id="hearts-container"></div>
-
     <script src="script.js"></script>
 </body>
 </html>
