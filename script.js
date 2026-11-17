@@ -12,7 +12,7 @@ const musicBtn = document.getElementById('music-btn');
 const bgMusic = document.getElementById('bg-music');
 const heartsContainer = document.getElementById('hearts-container');
 
-const loveLetter = "Dari sekian banyak orang yang kutemui, kamu adalah satu-satunya yang bikin aku ngerasa pulang. Terima kasih sudah hadir dengan segala ketulusanmu, bikin hal-hal sederhana terasa istimewa, dan selalu jadi bagian terbaik dalam hidupku. Kamu bukan cuma spesial, tapi kamu adalah rumah yang nggak pernah mau aku tinggalin. ❤️";
+const loveLetter = "Dari sekian banyak orang yang kutemui, kamu adalah satu-satunya yang bikin aku ngerasa pulang. Terima kasih sudah hadir dengan segala ketulusanmu, bikin hal-hal sederhana terasa istimewa, dan selalu jadi bagian terbaik dalam hidupku. Kamu bukan cuma spesial, tapi kamu adalah rumah. ❤️";
 
 const reasons = [
     "\"Cara kamu peduli sama hal-hal kecil tentang aku selalu bikin hatiku hangat.\"",
