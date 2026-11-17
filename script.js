@@ -12,7 +12,46 @@ const musicBtn = document.getElementById('music-btn');
 const bgMusic = document.getElementById('bg-music');
 const heartsContainer = document.getElementById('hearts-container');
 
-const loveLetter = "Dari sekian banyak orang yang kutemui, kamu adalah satu-satunya yang bikin aku ngerasa pulang. Terima kasih sudah hadir dengan segala ketulusanmu, bikin hal-hal sederhana terasa istimewa, dan selalu jadi bagian terbaik dalam hidupku. Kamu bukan cuma spesial, tapi kamu adalah rumah. ❤️";
+// TANGGAL JADIAN: 16 Oktober 2026
+const anniversaryDate = new Date('2026-10-16T00:00:00');
+
+function updateTimeCounter() {
+    const now = new Date();
+    const diffMs = now - anniversaryDate;
+
+    // Hitung total hari keseluruhan
+    const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    document.getElementById('total-days').textContent = totalDays;
+
+    // Hitung bulan, sisa hari, jam, menit, detik secara akurat
+    let months = (now.getFullYear() - anniversaryDate.getFullYear()) * 12 + (now.getMonth() - anniversaryDate.getMonth());
+    let tempDate = new Date(anniversaryDate);
+    tempDate.setMonth(tempDate.getMonth() + months);
+
+    if (now < tempDate) {
+        months--;
+        tempDate = new Date(anniversaryDate);
+        tempDate.setMonth(tempDate.getMonth() + months);
+    }
+
+    const remainderMs = now - tempDate;
+    const days = Math.floor(remainderMs / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainderMs / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((remainderMs / 1000 / 60) % 60);
+    const seconds = Math.floor((remainderMs / 1000) % 60);
+
+    document.getElementById('months').textContent = months;
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+}
+
+// Jalankan penghitung waktu setiap 1 detik
+setInterval(updateTimeCounter, 1000);
+updateTimeCounter();
+
+const loveLetter = "Dari sekian banyak orang yang kutemui, kamu adalah satu-satunya yang bikin aku ngerasa pulang. Sejak tanggal 16 Oktober kemarin, hari-hariku berubah jadi jauh lebih berwarna karena ada kamu. Terima kasih sudah hadir dengan segala ketulusanmu dan selalu jadi bagian terbaik dalam hidupku. ❤️";
 
 const reasons = [
     "\"Cara kamu peduli sama hal-hal kecil tentang aku selalu bikin hatiku hangat.\"",
@@ -56,7 +95,7 @@ openBtn.addEventListener('click', () => {
 function typeWriter(text, i) {
     if (i < text.length) {
         typewriterText.innerHTML += text.charAt(i);
-        setTimeout(() => typeWriter(text, i + 1), 38);
+        setTimeout(() => typeWriter(text, i + 1), 35);
     } else {
         document.querySelector('.cursor').style.display = 'none';
         interactiveSection.classList.add('show');

@@ -55,13 +55,14 @@ body {
     width: 100%;
     max-width: 500px;
     z-index: 10;
+    margin: 40px 0;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.92);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    padding: 36px 28px;
+    padding: 36px 26px;
     border-radius: 28px;
     box-shadow: 0 20px 45px rgba(184, 59, 94, 0.18);
     text-align: center;
@@ -102,8 +103,8 @@ h1 {
 }
 
 .title {
-    font-size: 2.2rem;
-    margin-bottom: 18px;
+    font-size: 2.15rem;
+    margin-bottom: 16px;
 }
 
 .intro-text {
@@ -113,13 +114,64 @@ h1 {
     margin-bottom: 24px;
 }
 
+/* Kotak Penghitung Waktu Jadian */
+.counter-box {
+    background: linear-gradient(135deg, #fff0f4, #ffe3ec);
+    border: 1px solid #f5c2d1;
+    border-radius: 18px;
+    padding: 16px 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(184, 59, 94, 0.08);
+}
+
+.counter-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #9e2a4b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.time-unit {
+    background: #ffffff;
+    padding: 8px 4px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(184, 59, 94, 0.08);
+}
+
+.time-unit span {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #b83b5e;
+}
+
+.time-unit small {
+    font-size: 0.68rem;
+    color: #825862;
+}
+
+.since-date {
+    font-size: 0.78rem;
+    color: #7a525c;
+    font-weight: 500;
+}
+
 .letter-box {
     background: #fff8f9;
-    padding: 22px;
+    padding: 20px;
     border-radius: 18px;
     border: 1px dashed #e69db0;
     text-align: left;
-    font-size: 0.94rem;
+    font-size: 0.92rem;
     line-height: 1.75;
     min-height: 140px;
     color: #4f3138;
