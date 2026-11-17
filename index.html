@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu yang Spesial ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Layar Pembuka (Amplop) -->
+        <div id="intro-screen" class="card active">
+            <div class="heart-icon">💌</div>
+            <h1>Ada pesan kecil buat kamu...</h1>
+            <p>Coba klik tombol di bawah ya.</p>
+            <button id="open-btn" class="btn-primary">Buka Pesan</button>
+        </div>
+
+        <!-- Layar Utama (Isi Pesan) -->
+        <div id="main-screen" class="card hidden">
+            <h2 class="title">Hai, Sayang ✨</h2>
+            <p class="subtitle">Cuma mau ngingetin satu hal penting hari ini:</p>
+            
+            <div class="message-box">
+                <!-- GANTI PESAN DI BAWAH INI SESUAI KEINGINANMU -->
+                <p>
+                    Di antara banyaknya hal yang terjadi setiap hari, kamu selalu jadi bagian favoritku. 
+                    Terima kasih sudah hadir, jadi tempat pulang paling nyaman, dan bikin hari-hariku jauh lebih berarti.
+                </p>
+                <p class="highlight">
+                    Kamu itu spesial banget buat aku, lebih dari yang bisa aku jelasin lewat kata-kata. ❤️
+                </p>
+            </div>
+
+            <!-- Alasan Kenapa Dia Spesial (Interaktif) -->
+            <div class="reason-section">
+                <p class="reason-label">Klik tombol ini kalau mau tahu alasan kenapa kamu spesial:</p>
+                <div id="reason-display" class="reason-box">Klik tombol di bawah! 👇</div>
+                <button id="reason-btn" class="btn-secondary">Lihat Alasan Lain</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container untuk animasi hati melayang -->
+    <div id="hearts-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
